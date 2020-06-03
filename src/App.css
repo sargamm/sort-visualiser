@@ -2,37 +2,73 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tool-title{
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 25%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+.SortButtons{
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type=range] {
+  margin-left: 12%;
+  margin-bottom: 2%;
+  /* display: flex; */
+  width: 15%;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 40%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  width: 16px;
+  height: 36px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #000000;
+}
+input[type=range]::-webkit-slider-runnable-track{
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background:  #e0cc44;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+.array-container{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+
+}
+.array-bar{
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ResetButton{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /* padding-right: 2%;
+  margin-right: 1%; */
 }
