@@ -227,16 +227,22 @@ render(){
                 <input className="slider toolbar-element" type="range" name="speed" value={this.state.speed} min="1050" max="1400" onChange={this.handleChange} step="10" disabled={this.state.active}/>
             </div>
             </div>
-            <div className="col-md-4 SortButtons">
-                <button type="button" className="btn btn-light btn-lg toolbar-element" onClick={this.bubbleSortAnimator} disabled={false} >Bubble Sort </button>
-                <button type="button" className="btn btn-light btn-lg toolbar-element" onClick={this.MergeSortAnimator} disabled={false} >Merge Sort </button>
-                <button type="button" className="btn btn-light btn-lg toolbar-element" onClick={this.InsertionsortAnimator} disabled={false} >Insertion Sort </button>
-                <button type="button" className="btn btn-light btn-lg toolbar-element" onClick={this.QuicksortAnimator} disabled={false} >Quick Sort </button>
+            <div className="col-md-1 SortButtons">
+                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.bubbleSortAnimator} disabled={false} >Bubble Sort </button>
+            </div>
+            <div className="col-md-1 SortButtons">
+                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.MergeSortAnimator} disabled={false} >Merge Sort </button>
+            </div>
+            <div className="col-md-1 SortButtons">
+                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.InsertionsortAnimator} disabled={false} >Insertion Sort </button>
+            </div> 
+            <div className="col-md-1 SortButtons"> 
+                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.QuicksortAnimator} disabled={false} >Quick Sort </button>
             </div>
             <div className="col-md-2 ResetButton">
-                <button type="button" className="btn btn-light btn-lg toolbar-element" onClick={this.ResetArray} disabled={false} >New Input</button>
+                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.ResetArray} disabled={false} >New Input</button>
             </div>
-        </div>
+            </div>
         <div className="row">
             <div className="col-md-3">
             </div>
