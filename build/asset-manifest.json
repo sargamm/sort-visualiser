@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sort-visualiser/static/css/main.4ca8db51.chunk.css",
+    "main.js": "/sort-visualiser/static/js/main.800fdacc.chunk.js",
+    "main.js.map": "/sort-visualiser/static/js/main.800fdacc.chunk.js.map",
+    "runtime-main.js": "/sort-visualiser/static/js/runtime-main.3c5d9c45.js",
+    "runtime-main.js.map": "/sort-visualiser/static/js/runtime-main.3c5d9c45.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/sort-visualiser/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.5b55a1e2.chunk.js": "/sort-visualiser/static/js/2.5b55a1e2.chunk.js",
+    "static/js/2.5b55a1e2.chunk.js.map": "/sort-visualiser/static/js/2.5b55a1e2.chunk.js.map",
+    "index.html": "/sort-visualiser/index.html",
+    "precache-manifest.9a824eaed2f64e2f821438202c4869af.js": "/sort-visualiser/precache-manifest.9a824eaed2f64e2f821438202c4869af.js",
+    "service-worker.js": "/sort-visualiser/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/sort-visualiser/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.4ca8db51.chunk.css.map": "/sort-visualiser/static/css/main.4ca8db51.chunk.css.map",
+    "static/js/2.5b55a1e2.chunk.js.LICENSE.txt": "/sort-visualiser/static/js/2.5b55a1e2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c5d9c45.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.5b55a1e2.chunk.js",
+    "static/css/main.4ca8db51.chunk.css",
+    "static/js/main.800fdacc.chunk.js"
+  ]
+}

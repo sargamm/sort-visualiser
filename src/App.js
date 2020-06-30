@@ -96,7 +96,7 @@ MergeSortAnimator(){
     let barstyle=arrayBars[index].style
     setTimeout(()=>{
       barstyle.backgroundColor="white"
-      barstyle.height=`${value}px`
+      barstyle.height=`${(value/750)*70}vh`
       setTimeout(()=>{
         barstyle.backgroundColor=" #e0cc44"
       },(1205-this.state.speed)*10)
@@ -130,8 +130,8 @@ QuicksortAnimator(){
     setTimeout(()=>{
       arrayBars[i1].style.backgroundColor="white"
       arrayBars[i2].style.backgroundColor="white"
-      arrayBars[i1].style.height=`${v1}px`
-      arrayBars[i2].style.height=`${v2}px`
+      arrayBars[i1].style.height=`${(v1/705)*70}vh`
+      arrayBars[i2].style.height=`${(v2/705)*70}vh`
       setTimeout(() => {
         arrayBars[i1].style.backgroundColor="#e0cc44"
         arrayBars[i2].style.backgroundColor="#e0cc44"
@@ -168,7 +168,7 @@ InsertionsortAnimator(){
     let[i1,v1]=animations[i]
     setTimeout(()=>{
       arrayBars[i1].style.backgroundColor="white"
-      arrayBars[i1].style.height=`${v1}px`
+      arrayBars[i1].style.height=`${(v1/705)*70}vh`
       setTimeout(() => {
         arrayBars[i1].style.backgroundColor="#e0cc44"
       }, (1205-this.state.speed)*10);
@@ -213,47 +213,55 @@ handleChange(event){
 
 render(){
   return(
-    <div>
-        <div className="row toolbar">
-            <div className="col-md-3">
-            <div className="slider-container">
-                <p className="tool-title">length</p>
-                <input className="slider toolbar-element" type="range" name="arraySize" value={this.state.arraySize} min="4" max="400" onChange={this.handleChange} step="1" disabled={this.state.active}/>
-            </div>
-            </div>
-            <div className="col-md-3">
-            <div className="slider-container">
-                <p className="tool-title">Speed</p>
-                <input className="slider toolbar-element" type="range" name="speed" value={this.state.speed} min="1050" max="1400" onChange={this.handleChange} step="10" disabled={this.state.active}/>
-            </div>
-            </div>
-            <div className="col-md-1 SortButtons">
-                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.bubbleSortAnimator} disabled={false} >Bubble Sort </button>
-            </div>
-            <div className="col-md-1 SortButtons">
-                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.MergeSortAnimator} disabled={false} >Merge Sort </button>
-            </div>
-            <div className="col-md-1 SortButtons">
-                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.InsertionsortAnimator} disabled={false} >Insertion Sort </button>
-            </div> 
-            <div className="col-md-1 SortButtons"> 
-                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.QuicksortAnimator} disabled={false} >Quick Sort </button>
-            </div>
-            <div className="col-md-2 ResetButton">
-                <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.ResetArray} disabled={false} >New Input</button>
-            </div>
-            </div>
-        <div className="row">
-            <div className="col-md-3">
-            </div>
-            <div className="col-md-7">
-            <Sorter state={this.state}/>
-            </div>
-            <div className="col-md-2"></div>
-        </div>
+    <>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <h1 class="navbar-brand" >Sort Visualiser</h1>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+      <div className="text-center">
+        <p className="tool-title">length</p>
+        <input className="slider toolbar-element" type="range" name="arraySize" value={this.state.arraySize} min="4" max="400" onChange={this.handleChange} step="1" disabled={this.state.active}/>
     </div>
-)
+      </li>
+      <li class="nav-item">
+        <div className="text-center">
+        <p className="tool-title">Speed</p>
+        <input className="slider toolbar-element" type="range" name="speed" value={this.state.speed} min="1050" max="1400" onChange={this.handleChange} step="10" disabled={this.state.active}/>
+    </div>
+      </li>
+      <li class="nav-item">
+        <div className=" ResetButton text-center">
+        <button type="button" className="btn btn-light btn-md toolbar-element" onClick={this.ResetArray} disabled={false} >New Input</button>
+    </div>
+      </li>
+    </ul>
+    </div>
+    <li class="nav-item dropdown">
+        <p style={{color:"#fff"}}class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sorting Algorithms
+        </p>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <button type="button" className="btn btn-light btn-block toolbar-element" onClick={this.bubbleSortAnimator} disabled={false} >Bubble Sort </button>
+        <button type="button" className="btn btn-light btn-block toolbar-element" onClick={this.MergeSortAnimator} disabled={false} >Merge Sort </button>
+        <button type="button" className="btn btn-light btn-block toolbar-element" onClick={this.InsertionsortAnimator} disabled={false} >Insertion Sort </button>
+        <button type="button" className="btn btn-light btn-block toolbar-element" onClick={this.QuicksortAnimator} disabled={false} >Quick Sort </button>
+        </div>
+      </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i className="fa fa-bars"/>
+    </button>
+  </nav>
+  <div className="row">
+    <div className="col-md-2" ></div>
+    <div className="col-md-8 col-sm-6 sorter">
+    <Sorter state={this.state}/>
+    </div>
+    <div className="col-md-2" ></div>
+</div>
+  </>
+  )
+  }
 }
-}
-
-export default App;
+export default App
