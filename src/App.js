@@ -96,7 +96,7 @@ MergeSortAnimator(){
     let barstyle=arrayBars[index].style
     setTimeout(()=>{
       barstyle.backgroundColor="white"
-      barstyle.height=`${(value/750)*70}vh`
+      barstyle.height=`${(value/705)*70}vh`
       setTimeout(()=>{
         barstyle.backgroundColor=" #e0cc44"
       },(1205-this.state.speed)*10)
@@ -112,7 +112,6 @@ MergeSortAnimator(){
 QuicksortAnimator(){
   if(this.state.sorted)
     return
-  
   this.DisableButtons()
   let arr=[]
 
@@ -121,7 +120,7 @@ QuicksortAnimator(){
   }
 
   let animations=QUICKSORT(arr)
-
+  console.log(arr)
   for(let i=0;i<animations.length-1;i+=2){
 
     let arrayBars=document.getElementsByClassName('array-bar')
@@ -132,6 +131,8 @@ QuicksortAnimator(){
       arrayBars[i2].style.backgroundColor="white"
       arrayBars[i1].style.height=`${(v1/705)*70}vh`
       arrayBars[i2].style.height=`${(v2/705)*70}vh`
+      console.log((v1/705)*70)
+      console.log((v2/705)*70)
       setTimeout(() => {
         arrayBars[i1].style.backgroundColor="#e0cc44"
         arrayBars[i2].style.backgroundColor="#e0cc44"
@@ -216,7 +217,6 @@ render(){
     <>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <h1 class="navbar-brand" >Sort Visualiser</h1>
-  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">

@@ -10,7 +10,7 @@ function Sorter(props){
          {/* <h1 style={{color:"white"}}>{size}</h1> */}
          {  array.map((value,idx)=>(
                 <div
-                    style={{ height:`${(value/705)*60}vh`, width:`${w}%`, backgroundImage:"linear-gradient(to bottom, #f3efe9,#d1bcd6)" }}
+                    style={{ height:`${(value/705)*70}vh`, width:`${w}%`, backgroundImage:"linear-gradient(to bottom, #f3efe9,#d1bcd6)" }}
                     key={idx}
                     className="array-bar"
                     >
